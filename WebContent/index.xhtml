@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html">
+	
+<h:head>
+	<title>Primeira Página JSF</title>
+</h:head>
+
+<h:body style="margin: 40px;">
+	<h:form>
+		<h3>Ola Clid</h3>
+		<h:commandButton value="Navegar para Primeira Página" action="primeiraPagina?faces-redirect=true"></h:commandButton>
+		<hr/>
+		<h4>Mensagem recebida da navegação dinâmica: </h4> 
+		<h:outputText value="#{pessoaBean.nomeCompleto}"></h:outputText>
+		
+	</h:form>
+</h:body>
+</html> 

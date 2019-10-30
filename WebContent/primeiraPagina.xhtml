@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html">
+	
+<h:head>
+	<title>Primeira Página JSF</title>
+</h:head>
+
+<h:body style="margin: 40px;">
+	<h:form>
+		<span style="background-color: tomato; color: white; padding: 10px; font-size: 20px;">
+			<h:outputText value="Olá, introduza o seu nome: "></h:outputText>
+		</span>
+		
+		<span style="background-color: green; color: white; padding: 10px; font-size: 20px;">
+			<h:inputText id="campoNome" value="#{pessoaBean.nome}"></h:inputText>
+		</span>
+		
+		<span style="background-color: tomato; color: white; padding: 10px; font-size: 20px;">
+			<h:outputText value="Introduza o seu sobre nome "></h:outputText>
+		</span>
+		
+		<span style="background-color: green; color: white; padding: 10px; font-size: 20px;">
+			<h:inputText id="campoSobreNome" value="#{pessoaBean.sobreNome}"></h:inputText>
+		</span>
+		
+		<br></br>
+		<br></br>
+		<span style="background-color: gray; color: white; padding: 10px; font-size: 20px;">
+			<h:outputText id="campoNomeCompleto" value="#{pessoaBean.nomeCompleto}"></h:outputText>
+		</span>
+		
+		<br/>
+		<br/>
+		<h:commandButton binding="#{pessoaBean.commandButton}" value="Gerar nome completo" action="#{pessoaBean.concatenarNomes}"/>
+		
+		<br></br>
+		<br></br>
+		<h:dataTable value="#{pessoaBean.nomes}" var="nome">
+			<h:column>
+				<h:outputText value="#{nome}"/>
+			</h:column>
+		</h:dataTable>
+		
+		<h:commandButton value="Limpar lista" action="#{pessoaBean.limparLista}"></h:commandButton>
+	</h:form>
+</h:body>
+</html>
